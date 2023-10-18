@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace Tumakov_7
 {
-    class Bank
+
+    /*Создать класс банковского счета и объект класса. Вывести информацию.*/
+    public class Bank
     {
-        private long Balance { get; set;}
-        private long Number { get; set;}
+        private long Balance { get; set; }
+        private long Number { get; set; }
         private enum bank_account
         {
             actual_bank_account = 18102023,
             saving_bank_account = 21102023
         }
-        
+
         private Bank(long balance, long number)
         {
             Balance = balance;
             Number = number;
         }
-        static void Tumakov1()
+        public static void Tumakov1()
         {
             bank_account account_bank = bank_account.actual_bank_account;
             Console.WriteLine("Счет в банке: {0}", (long)account_bank);
@@ -32,7 +34,7 @@ namespace Tumakov_7
                 Console.Write("Введите пожалуйста номер счета:");
                 if (Int64.TryParse(Console.ReadLine(), out long number))
                 {
-                    
+
                     Console.WriteLine("Успешно");
                 }
                 else
@@ -54,11 +56,30 @@ namespace Tumakov_7
                 Bank account = new Bank(number, balance);
                 Console.WriteLine("Номер счета равен = {0}, Баланс счета равен = {1}", account.Balance, account.Number);
             }
-            
+
         }
+    }
+    class Bank1
+    {
+        private long Balance { get; set; }
+        private long Number { get; set; }
+        private enum bank_account
+        {
+            actual_bank_account = 18102023,
+            saving_bank_account = 21102023
+        }
+
+        private Bank1(long balance, long number)
+        {
+            Balance = balance;
+            Number = number;
+        }
+    }
+    class Program
+    {
         static void Main()
         {
-            Tumakov1();
+            Bank.Tumakov1();
             Console.ReadKey();
         }
     }
