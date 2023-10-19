@@ -2,14 +2,16 @@
 
 namespace Creative_Task
 {
-    abstract public class Company
+    /*Тема - Многонациональные компании*/
+
+    abstract public class Company /*Абстрактный класс */
     {
         public abstract int Get_Year();
         public abstract string Get_Name();
         public abstract string Get_Name_Creator();
         public abstract byte Get_Capital();
     }
-    class Coke_Cola : Company
+    class Coke_Cola : Company /*Класс наследник*/
     {
         public int Year { get; set; }
         public string Name { get; set; }
@@ -47,7 +49,7 @@ namespace Creative_Task
             Console.WriteLine($"Общий капитал компании равен {capital} млрд.");
         }
     }
-    class Intel : Company
+    class Intel : Company /*Класс наследник*/
     {
         public int Year { get; set; }
         public string Name { get; set; }
@@ -85,7 +87,7 @@ namespace Creative_Task
             Console.WriteLine($"Общий капитал компании равен {capital} млрд.");
         }
     }
-    class Fillials
+    class Fillials /*Класс Филлиал*/
     {
         public string Company { get; set; }
         public int Imployee { get; set; }
