@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Tumakov_7
 {
 
-    /*Создать класс банковского счета и объект класса. Вывести информацию.*/
+    /*Тумаков 7.1 - Создать класс банковского счета и объект класса. Вывести информацию.*/
     public class Bank
     {
         private long Balance { get; set; }
@@ -59,26 +59,11 @@ namespace Tumakov_7
 
         }
     }
-    class Bank1
-    {
-        private long Balance { get; set; }
-        private long Number { get; set; }
-        private enum bank_account
-        {
-            actual_bank_account = 18102023,
-            saving_bank_account = 21102023
-        }
-
-        private Bank1(long balance, long number)
-        {
-            Balance = balance;
-            Number = number;
-        }
-    }
     class Program
     {
         static void Main()
         {
+            Console.WriteLine("Тумаков 7.1 - Создать класс банковского счета и объект класса. Вывести информацию.");
             Bank.Tumakov1();
             Console.ReadKey();
         }
